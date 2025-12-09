@@ -1,0 +1,11 @@
+symptom,count
+sym_chest_pain,3762
+sym_fever,2848
+sym_cough,2732
+sym_dyspnea,2517
+sym_palpitations,2427
+sym_orthopnea,2317
+sym_shortness_of_breath,1895
+sym_sob,1760
+sym_syncope,1670
+sym_wheeze,88
