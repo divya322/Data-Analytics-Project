@@ -26,14 +26,15 @@ CLASS_PRIORITY = [1, 2, 3, 4]
 
 script_dir = Path(__file__).resolve().parent
 FEATURE_PATH = script_dir.parent.parent / "Tasks" / "1" / "Features"
+DATA_PATH = script_dir.parent.parent / "Tasks" / "1" / "Data"
 
 # Data loading
 
 def load_patient_profiles():
-    return pd.read_csv(FEATURE_PATH / "patient_profile_clustering.csv")
+    return pd.read_csv(FEATURE_PATH / "patient_profiles.csv")
 
 def load_diagnoses_data():
-    return pd.read_csv(FEATURE_PATH / "patient_profiles_core.csv")
+    return pd.read_csv(DATA_PATH / "heart_diagnoses_1.csv")
 
 # ICD → class helpers
 
