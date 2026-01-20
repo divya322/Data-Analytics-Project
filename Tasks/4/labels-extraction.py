@@ -6,12 +6,13 @@ import pandas as pd
 ischemic_codes = ['I20', 'I21', 'I22', 'I24', 'I25']
 script_dir = Path(__file__).resolve().parent  
 FEATURE_PATH = script_dir.parent.parent / "Tasks" /   "1" / "Features"
+DATA_PATH = script_dir.parent.parent / "Tasks" /   "1" / "Data"
 
 def load_patient_profiles():
     """
     Load the patient profiles dataset
     """
-    PATIENT_PROFILES_NAME = "patient_profile_clustering.csv"
+    PATIENT_PROFILES_NAME = "patient_profiles.csv"
     
     patients = pd.read_csv(FEATURE_PATH / PATIENT_PROFILES_NAME)
     return patients
@@ -22,9 +23,9 @@ def load_diagnoses_data():
     Load the dataset containing patient ICD codes
     """
     
-    DIAGNOSES_NAME = "patient_profiles_core.csv" 
+    DIAGNOSES_NAME = "heart_diagnoses_1.csv" 
     
-    diagnoses = pd.read_csv(FEATURE_PATH / DIAGNOSES_NAME)
+    diagnoses = pd.read_csv(DATA_PATH / DIAGNOSES_NAME)
     return diagnoses
 
 
